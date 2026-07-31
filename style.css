@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #ddd4c3;
+    font-family: monospace;
+}
+
+.juego {
+    position: relative;
+    width: min(1200px, 100%);
+    min-height: 600px;
+}
+
+h1 {
+    position: relative;
+    top: 65px;
+    text-align: center;
+    color: #696969;
+}
+
+input {
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    transform: translateX(-50%);
+    text-align: center;
+    border-style: none;
+    background: none;
+    width: min(90vw, 300px);
+}
+
+input:focus {
+    outline: none;
+}
+
+img {
+    position: absolute;
+    left: 0;
+    top: 200px;
+    width: 100px;
+    height: 120px;
+}
+
+.botones {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+}
+
+button {
+    padding: 10px 16px;
+    border-radius: 15px;
+    background: none;
+    border-color: #ddd4c3;
+    transition: box-shadow, 2s ease-in-out;
+}
+
+button:hover {
+    box-shadow: 5px 3px 0;
+}
+
+@media (max-width: 768px) {
+    .juego {
+        min-height: 540px;
+    }
+
+    h1 {
+        top: 40px;
+        font-size: 1.3rem;
+    }
+
+    input {
+        top: 120px;
+        width: 80vw;
+    }
+
+    img {
+        top: 180px;
+        width: 84px;
+        height: 104px;
+    }
+
+    .botones {
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .juego {
+        min-height: 500px;
+    }
+
+    h1 {
+        top: 20px;
+        font-size: 1.1rem;
+    }
+
+    input {
+        top: 85px;
+        width: 82vw;
+    }
+
+    img {
+        top: 165px;
+        width: 76px;
+        height: 92px;
+    }
+
+    .botones {
+        width: 100%;
+        justify-content: center;
+    }
+
+    button {
+        padding: 12px 18px;
+    }
+}
